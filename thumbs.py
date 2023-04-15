@@ -38,8 +38,6 @@ def process_directory(directory):
                 image_path = os.path.join(root, file)
                 create_thumbnail(image_path)
 
-create_thumbnail("images/header-background.png", 400)
-
 if __name__ == "__main__":
     input_directory = "menu"
     process_directory(input_directory)
