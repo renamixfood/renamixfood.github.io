@@ -75,7 +75,7 @@ for category, files in sorted(dish_data_raw.items(), key=lambda x: x[0]):
         name,descr = (name.split('(') + [''])[0:2]
         name = name.replace("gedroogde fruit", "gedroogd fruit")
         descr = descr.replace(')', '')
-        price = price.replace('€', '')
+        # price = price.replace('€', '')
         price = price.strip().rsplit('.', 1)[0]
         # replace point with comma if preceded by a number
         price = re.sub(r'(\d)\.(\d)', r'\1,\2', price)
