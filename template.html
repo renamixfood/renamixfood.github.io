@@ -204,7 +204,7 @@
         <section id="menu">
             <h2>Menu</h2>
             {% for category, dishes in dish_data.items() %}
-            <h3>{{ category.split('.', 1)[1] }}</h3>
+            <h3>{{ category.split('.', 1)[1].replace(' ,', ', ') }}</h3>
             <div class="menu-items">
                 {% for dish in dishes %}
                 <div class="menu-item">

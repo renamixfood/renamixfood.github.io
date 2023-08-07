@@ -79,6 +79,7 @@ for category, files in sorted(dish_data_raw.items(), key=lambda x: x[0]):
         price = price.strip().rsplit('.', 1)[0]
         # replace point with comma if preceded by a number
         price = re.sub(r'(\d)\.(\d)', r'\1,\2', price)
+        price = re.sub(r'(\d), (\d)', r'\1,\2', price)
         image = f'menu/{category}/{file}'
         thumb = os.path.splitext(image)[0] + "_thumb" + os.path.splitext(image)[1]
         dish_data[category].append(Dish(name.strip(), price, descr, image, thumb))
